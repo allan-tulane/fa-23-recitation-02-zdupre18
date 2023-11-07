@@ -1,6 +1,6 @@
 # CMPS 2200  Recitation 02
 
-**Name (Team Member 1):**_________________________  
+**Name (Team Member 1):**_____________zoe dupre____________  
 **Name (Team Member 2):**_________________________
 
 In this recitation, we will investigate recurrences. 
@@ -40,12 +40,28 @@ where $W(1) = 1$.
 
 - [ ] 4. (2 point) Now, derive the asymptotic behavior of $W(n)$ using $f(n) = 1$, $f(n) = \log n$ and $f(n) = n$. Then, generate actual values for $W(n)$ for your code and confirm that the trends match your derivations.
 
+for f(n) = 1 the work = O(1)  since the input size of n is constant 
+for f(n) log n = O(log(n)) since each input scales logarithmly with each iterations 
+for f(n) = n$ = o(n) because it scaleds linearly with each input 
+
 **TODO: your answer goes here**
 
-- [ ] 5. (4 points) Now that you have a nice way to empirically generate valuess of $W(n)$, we can look at the relationship between $a$, $b$, and $f(n)$. Suppose that $f(n) = n^c$. What is the asypmptotic behavior of $W(n)$ if $c < \log_b a$? What about $c > \log_b a$? And if they are equal? Modify `compare_work` to compare empirical values for different work functions (at several different values of $n$) to justify your answer. 
+- [ ] 5. (4 points) Now that you have a nice way to empirically generate valuess of $W(n)$, we can look at the relationship between $a$, $b$, and $f(n)$. Suppose that $f(n) = n^c$. What is the asypmptotic behavior of $W(n)$ if $c < \log_b a$? What about $c > \log_b a$? And if they are equal? Modify `compare_work` to compare empirical values for different work functions (at several different values of $n$) to justify your answer.
+
+**If c < log_b(a): O(1) 
+**If c > log_b(a): O(f(n))
+If c = log_b(a):O(f(n) * log(n))
+
 
 **TODO: your answer goes here**
 
 - [ ] 6. (3 points) $W(n)$ is meant to represent the running time of some recursive algorithm. Suppose we always had $a$ processors available to us and we wanted to compute the span of the same algorithm. Implement the function `span_calc` to compute the empirical span, where the work of the algorithm is given by $W(n)$. Implement `test_compare_span` to create a new comparison function for comparing span functions. Derive the asymptotic expressions for the span of the recurrences you used in problem 4 above. Confirm that everything matches up as it should. 
 
 **TODO: your answer goes here**
+
+constant = O(1) 
+**doesnt depend on input size 
+log = O(1)
+**grows logarithmyically with input size 
+linear = O(n) 
+**since linear constnat num of processours used 
